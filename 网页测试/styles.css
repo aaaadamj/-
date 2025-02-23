@@ -1,9 +1,11 @@
 :root {
     --deep-blue: #1a4c88;
+    --light-blue-bg: #e8f0f9;
+    --medium-blue-bg: #c5d9ed;
+    --deep-blue-bg: #1a4c88;
     --gold: #d4af37;
     --light-blue: #f5f8fc;
     --gray: #666666;
-    --bg-gray: #f8f9fa;
     --gradient-blue: linear-gradient(135deg, #1a4c88 0%, #2a6ca5 100%);
     --gradient-gold: linear-gradient(135deg, #d4af37 0%, #f5d76e 100%);
     --card-shadow: 0 10px 20px rgba(0,0,0,0.05);
@@ -14,14 +16,13 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Microsoft YaHei", sans-serif;
-    background: var(--bg-gray);
-    background-image: 
-        linear-gradient(45deg, #f1f3f6 25%, transparent 25%),
-        linear-gradient(-45deg, #f1f3f6 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, #f1f3f6 75%),
-        linear-gradient(-45deg, transparent 75%, #f1f3f6 75%);
-    background-size: 20px 20px;
-    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    background: linear-gradient(
+        to bottom,
+        var(--light-blue-bg) 0%,
+        var(--medium-blue-bg) 50%,
+        var(--deep-blue-bg) 100%
+    );
+    min-height: 100vh;
 }
 
 .header {
@@ -126,7 +127,7 @@ body {
     width: 80%;
     margin: 40px auto;
     backdrop-filter: blur(10px);
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.95);
     border-radius: 15px;
     padding: 30px;
     box-shadow: var(--card-shadow);
@@ -222,7 +223,7 @@ textarea:focus {
 }
 
 .result-card {
-    background: white;
+    background: rgba(255,255,255,0.95);
     border-radius: 12px;
     padding: 25px;
     box-shadow: var(--card-shadow);
@@ -304,7 +305,7 @@ textarea:focus {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     padding: 20px;
-    background: white;
+    background: rgba(255,255,255,0.95);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: var(--card-shadow);
@@ -400,7 +401,7 @@ textarea:focus {
 }
 
 .template-box {
-    background: white;
+    background: rgba(255,255,255,0.95);
     border-radius: 12px;
     padding: 25px;
     box-shadow: var(--card-shadow);
